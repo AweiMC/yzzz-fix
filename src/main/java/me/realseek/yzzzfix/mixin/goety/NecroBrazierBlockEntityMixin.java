@@ -162,7 +162,7 @@ public abstract class NecroBrazierBlockEntityMixin extends ModBlockEntity {
         return drained;
     }
 
-    @Inject(method = "tick()V", at = @At(value = "INVOKE", target = "Ljava/util/List;iterator()Ljava/util/Iterator;", remap = false))
+    @Inject(method = "tick()V", at = @At(value = "INVOKE", target = "Ljava/util/List;iterator()Ljava/util/Iterator;", ordinal = 0, remap = false))
     private void yzzzfix$preciseTickDraining(CallbackInfo ci) {
         Level level = this.level;
         BrazierRecipe recipe = this.getRecipe();

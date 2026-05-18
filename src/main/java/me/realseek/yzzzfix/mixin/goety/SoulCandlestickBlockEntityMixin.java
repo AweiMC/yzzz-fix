@@ -10,8 +10,9 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 public class SoulCandlestickBlockEntityMixin {
 
     /**
-     * 修复 Goety 原版 Bug：drainSouls 强行要求 souls > amount 导致最后一点灵魂永久锁死。
+     * 修复 Goety (goety-2.5.46.3) 原版 Bug：drainSouls 强行要求 souls > amount 导致最后一点灵魂永久锁死。
      * 拦截 getSouls()，如果是有效灵魂，返回 +1 欺骗原版判断，将 > 转换为 >=。
+     * 注意：此 Redirect 仅作用于 drainSouls 方法内的 getSouls 调用，不影响其他调用点。
      */
     @Redirect(
             method = "drainSouls",
