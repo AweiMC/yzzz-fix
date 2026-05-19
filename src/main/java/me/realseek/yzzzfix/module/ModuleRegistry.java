@@ -96,7 +96,8 @@ public final class ModuleRegistry {
             module("aquamirae", "Aquamirae Pouch Fix", "aquamirae_pouch_fix", List.of("aquamirae")),
             module("depthcrawler", "Depthcrawler Fix", "depthcrawler_fix", List.of("depthcrawler")),
             module("moonstone", "Moonstone Fix", "moonstone_fix", List.of("moonstone")),
-            module("slashbladeresharped", "SlashBlade SSS Fix", "slashbladeresharped_fix", List.of("slashblade"))
+            module("slashbladeresharped", "SlashBlade SSS Fix", "slashbladeresharped_fix", List.of("slashblade")),
+            module("malum", "Malum Spirit Fix", "malum_spirit_fix", List.of("malum"))
     );
 
     private ModuleRegistry() {
