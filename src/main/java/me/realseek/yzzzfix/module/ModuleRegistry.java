@@ -78,6 +78,7 @@ public final class ModuleRegistry {
             module("endinglib", "EndingLib Fix", "endinglib_fix", List.of("endinglib")),
             module("eidolon_hearts", "Eidolon Hearts Fix", "eidolon_hearts_fix", List.of("eidolon")),
             module("goety", "Goety Fix", "goety_fix", List.of("goety")),
+            module("malum", "Malum Fix", "malum_fix", List.of("malum")),
             module(
                     "celestial_forge",
                     "Celestial Forge Fix",
@@ -128,7 +129,8 @@ public final class ModuleRegistry {
                             "com.github.tartaricacid.touhoulittlemaid.entity.misc.DefaultMonsterType"
                     ),
                     ModuleRuntimeHooks.NOOP
-            )
+            ),
+            module("collect_equipment_fix", "CollectEquipment Fix", "collect_equipment_fix", List.of())
     );
 
     private ModuleRegistry() {
