@@ -1,4 +1,4 @@
-package me.aweimc.forge.mixins.fix.shieldexp;
+package me.realseek.yzzzfix.mixin.shieldexp;
 
 import org.infernalstudios.shieldexp.init.ShieldDataLoader;
 import org.spongepowered.asm.mixin.Mixin;
@@ -7,7 +7,6 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-@Pseudo
 @Mixin(ShieldDataLoader.class)
 public abstract class ShieldDataLoaderMixin {
 
