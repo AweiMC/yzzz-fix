@@ -1,4 +1,4 @@
-package me.aweimc.forge.mixins.fix.enigmaticlegacy;
+package me.realseek.yzzzfix.mixin.enigmaticlegacy;
 
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
