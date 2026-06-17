@@ -1,9 +1,7 @@
 package me.aweimc.forge.mixins.fix.enigmaticlegacy;
 
-import com.aizistral.enigmaticlegacy.brewing.AbstractBrewingRecipe;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
-import me.aweimc.forge.CrashModFixModForge;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 
@@ -11,7 +9,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-@Mixin(AbstractBrewingRecipe.class)
+@Mixin(targets = "com.aizistral.enigmaticlegacy.brewing.AbstractBrewingRecipe")
 public class AbstractBrewingRecipeMixin {
 
     @WrapOperation(
@@ -24,7 +22,7 @@ public class AbstractBrewingRecipeMixin {
             remap = false
     )
     private Object safeGet(
-            HashMap<Object, List<AbstractBrewingRecipe>> map,
+            HashMap<Object, List<Object>> map,
             Object key,
             Operation<Object> original
     ) {
@@ -35,7 +33,7 @@ public class AbstractBrewingRecipeMixin {
 //            );
 
             //LOGGGGGGGGGGGGGGGGGGGGGGGG DEBUGGGG
-            List<AbstractBrewingRecipe> list = new ArrayList<>();
+            List<Object> list = new ArrayList<>();
             map.put(key, list);
             return list;
         }
